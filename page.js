@@ -1,3 +1,3 @@
 function page(){
-    return 10;
+    return 1000;
 }
