@@ -1,7 +1,9 @@
-import { Route, Switch } from'react-router-dom'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Categories from './components/Categories'
+import { Route, Switch } from'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Categories from './components/Categories';
+import PetDetails from './components/Pet/Petdetails';
+import Timer from './components/Timer'
 
 
 function App() {
@@ -10,12 +12,15 @@ function App() {
     
     <Header/>
     <Switch>
-      <Route path="/" exact component={Categories}></Route>
+      <Route path="/"  exact component={Categories}></Route>
       <Route path="/categories/:category"  component={Categories}></Route>
+      <Route path="/pets/:id"  component={PetDetails}></Route>
+      <Route path="/time"  component={Timer}></Route>
+      
     </Switch>
     <Footer/>
     <style jsx>
-      {`
+    {`
       body {
     padding: 0;
     margin: 0;
